@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #fdf8f5;
+}
+
+.page {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background: #b76e79;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,73 @@
+/* Section Styling */
+.page {
+  padding: 40px 16px;
+  text-align: center;
+}
+
+.page h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+/* ===== MOBILE FIRST ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;   /* 1 image per row */
+  gap: 16px;
+}
+
+/* Image Styling */
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* Makes all images square */
+  object-fit: cover;     /* Crops image nicely */
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Smooth hover effect (desktop only will feel better) */
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+
+/* ===== SMALL DEVICES (≥ 480px) ===== */
+@media (min-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);  /* 2 per row */
+  }
+}
+
+
+/* ===== TABLET (≥ 768px) ===== */
+@media (min-width: 768px) {
+  .page {
+    padding: 60px 40px;
+  }
+
+  .page h2 {
+    font-size: 28px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+
+/* ===== SMALL DESKTOP (≥ 1024px) ===== */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);  /* 3 per row */
+  }
+}
+
+
+/* ===== LARGE DESKTOP (≥ 1440px) ===== */
+@media (min-width: 1440px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);  /* 4 per row */
+  }
+}

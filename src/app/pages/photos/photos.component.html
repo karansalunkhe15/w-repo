@@ -1,0 +1,17 @@
+<section class="page">
+  <h2>Photo Gallery</h2>
+
+  <div class="gallery">
+<img src="assets/couple.jpg" alt="">
+<img *ngFor="let img of images"
+     [src]="'assets/' + img"
+     alt="Gallery Image">
+     
+     <img *ngFor="let img of imagess"
+     [src]="'assets/' + img"
+     alt="Gallery Image">
+
+
+
+  </div>
+</section>

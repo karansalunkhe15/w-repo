@@ -1,0 +1,114 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 90vh; /* mobile optimized */
+  background: url('/assets/couple.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dark overlay for better text visibility */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  color: white;
+  max-width: 900px;
+}
+
+/* ===== MOBILE FIRST TEXT ===== */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ===== COUNTDOWN ===== */
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.countdown div {
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.countdown span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* ===== SMALL DEVICES (≥480px) ===== */
+@media (min-width: 480px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* ===== TABLET (≥768px) ===== */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 85vh;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+  }
+
+  .countdown div {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+/* ===== DESKTOP (≥1024px) ===== */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 95vh;
+  }
+
+  h1 {
+    font-size: 75px;
+  }
+
+  .countdown div {
+    font-size: 20px;
+  }
+}

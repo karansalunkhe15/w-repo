@@ -1,0 +1,80 @@
+/* ===== NAVBAR BASE ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: block;
+}
+
+/* ===== MOBILE MENU ===== */
+ul {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul.open {
+  display: flex;
+}
+
+li {
+  padding: 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #b76e79;
+}
+
+/* ===== TABLET & DESKTOP ===== */
+@media (min-width: 768px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    box-shadow: none;
+  }
+
+  li {
+    padding: 0;
+  }
+}
